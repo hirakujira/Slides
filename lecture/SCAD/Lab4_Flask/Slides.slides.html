@@ -261,9 +261,8 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Web-Framework">Web Framework<a class="anchor-link" href="#Web-Framework">&#182;</a></h2><blockquote><p>A Web framework is a collection of packages or modules which allow developers to write Web applications or services without having to handle low-level details, such as protocols, sockets or process / thread management.</p>
+<h2 id="Web-Framework">Web Framework<a class="anchor-link" href="#Web-Framework">&#182;</a></h2><p>A Web framework is a collection of packages or modules which allow developers to write Web applications or services without having to handle low-level details, such as protocols, sockets or process / thread management.</p>
 <p>Generally, frameworks provide support for a number of activities such as interpreting requests (getting form parameters, handling cookies and sessions), producing responses (presenting data as HTML or in other formats), storing data persistently, and so on.</p>
-</blockquote>
 <p><a href="http://wiki.python.org/moin/WebFrameworks">http://wiki.python.org/moin/WebFrameworks</a></p>
 
 </div>
@@ -328,8 +327,9 @@ div.output_prompt {
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
     <span class="k">return</span> <span class="s">&quot;Hello World&quot;</span><span class="p">;</span>
 
-<span class="c">#Making sure that the app only runs if the script is executed directly</span>
-<span class="c">#from the Python interpreter and not used as imported</span>
+<span class="c">#Making sure that the app only runs if the script</span>
+<span class="c">#is executed directly from the Python interpreter</span>
+<span class="c">#and not used as imported</span>
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
@@ -399,9 +399,13 @@ div.output_prompt {
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">)</span>
 
+
+<span class="c">#What to do then the URL pattern is &quot;/hello/&lt;name&gt;&quot; or &quot;/hello&quot;</span>
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s">&#39;/hello/&#39;</span><span class="p">)</span>
-<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s">&#39;/hello/&lt;name&gt;/&#39;</span><span class="p">)</span>  <span class="c">#What to do then the URL pattern is &quot;/hello/&lt;name&gt;&quot;</span>
-<span class="k">def</span> <span class="nf">hello_view</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>    <span class="c">#Default value of name is None (null)</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s">&#39;/hello/&lt;name&gt;/&#39;</span><span class="p">)</span> 
+
+<span class="c">#Default value of name is None (null)</span>
+<span class="k">def</span> <span class="nf">hello_view</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>    
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;hello.html&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
