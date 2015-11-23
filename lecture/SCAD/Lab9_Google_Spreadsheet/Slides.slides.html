@@ -223,7 +223,39 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Social-Computing-Application-Design-Lab-9">Social Computing Application Design Lab 9<a class="anchor-link" href="#Social-Computing-Application-Design-Lab-9">&#182;</a></h1><h3 id="Google--Spreadsheet">Google  Spreadsheet<a class="anchor-link" href="#Google--Spreadsheet">&#182;</a></h3>
+<h1 id="Social-Computing-Application-Design-Lab-9">Social Computing Application Design Lab 9<a class="anchor-link" href="#Social-Computing-Application-Design-Lab-9">&#182;</a></h1><h3 id="Google-Spreadsheet">Google Spreadsheet<a class="anchor-link" href="#Google-Spreadsheet">&#182;</a></h3>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adventages-of-using-Google-Spreadsheet">Adventages of using Google Spreadsheet<a class="anchor-link" href="#Adventages-of-using-Google-Spreadsheet">&#182;</a></h2><ul>
+<li>Don't need to host your own database</li>
+<li>Integrated with Google form</li>
+<li>Can cooperate with other easily</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="In-these-cases,-it's-better-to-use-database">In these cases, it's better to use database<a class="anchor-link" href="#In-these-cases,-it's-better-to-use-database">&#182;</a></h2><ul>
+<li>There're so many records / data</li>
+<li>You don't want to get all data in every request</li>
+<li>Search specific records from your data set</li>
+</ul>
+
 </div>
 </div>
 </div></section>
@@ -337,8 +369,8 @@ div.output_prompt {
 <pre><code>var result;
 $.getJSON(url, function(data) { 
     result = data;
-}
-console.log(data); //undefined</code></pre>
+});
+console.log(result); //undefined</code></pre>
 
 </div>
 </div>
@@ -353,8 +385,8 @@ console.log(data); //undefined</code></pre>
 <pre><code>var result;
 $.getJSON(url, function(data) { 
     result = data;
-}.then(function(){
-    console.log(data);
+}).then(function(){
+    console.log(result);
 });</code></pre>
 
 </div>
